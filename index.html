@@ -636,7 +636,11 @@
                   <option value="ARCO">ARCO</option>
                   <option value="GIOVINAZZO">GIOVINAZZO</option>
                   <option value="AZ.T.C.">AZ.T.C.</option>
+                  <option value="M.B.T.F.">M.B.T.F.</option>                  
                   <option value="VASTA">VASTA</option>
+                  <option value="APAL">APAL</option> 
+                  <option value="GEIMA">GEIMA</option>
+                  <option value="UNIONBERG">UNIONBERG</option>                  
                   <option value="ALTRO">ALTRO</option>
               </select>
               <input type="text" class="form-control mt-2 altro-fornitore hidden-field" placeholder="Specifica altro fornitore">
@@ -851,7 +855,7 @@
                    <option value="STANDARD">STANDARD</option>
                    <option value="LIMPIDO">LIMPIDO</option>
                    <option value="SEMICLEAR">SEMICLEAR</option>
-                   <option value="1%">1%</option>
+                   <option value="<1%"><1%</option>
                    <option value="2%">2%</option>
                    <option value="3%">3%</option>
                    <option value="6%">6%</option>
@@ -899,7 +903,7 @@
                    <option value="STANDARD">STANDARD</option>
                    <option value="LIMPIDO">LIMPIDO</option>
                    <option value="SEMICLEAR">SEMICLEAR</option>
-                   <option value="1%">1%</option>
+                   <option value="<1%"><1%</option>
                    <option value="2%">2%</option>
                    <option value="3%">3%</option>
                    <option value="6%">6%</option>
@@ -940,7 +944,7 @@
                    <option value="STANDARD">STANDARD</option>
                    <option value="LIMPIDO">LIMPIDO</option>
                    <option value="SEMICLEAR">SEMICLEAR</option>
-                   <option value="1%">1%</option>
+                   <option value="<1%"><1%</option>
                    <option value="2%">2%</option>
                    <option value="3%">3%</option>
                    <option value="6%">6%</option>
@@ -1083,7 +1087,7 @@ $(document).ready(function() {
    // Calcolo automatico rese in base al tipo di agrume
    function calculateAutoYields(agrume) {
        const yields = {
-           'LIMONE': { prima: 30, seconda: 10, torchiato: 5 },
+           'LIMONE': { prima: 32, seconda: 5, torchiato: 6 },
            'ARANCIA': { prima: 35, seconda: 12, torchiato: 6 },
            'MANDARINO': { prima: 42, seconda: 10, torchiato: 4 },
            'POMPELMO': { prima: 30, seconda: 15, torchiato: 6 },
@@ -1104,12 +1108,12 @@ $(document).ready(function() {
            // Reset dei valori quando nascosta
            supplierElement.find('.resa-seconda').val('');
            supplierElement.find('.quantita-seconda').val('');
-           supplierElement.find('.destinazione-seconda').val('');
+           supplierElement.find('.destinazione-seconda').val('NAT IN TINI');
            supplierElement.find('.pastorizzato-seconda').val('SI');
-           supplierElement.find('.tenore-polpa-seconda').val('STANDARD');
+           supplierElement.find('.tenore-polpa-seconda').val('<1%');
            supplierElement.find('.brix-seconda').val('NAT');
            supplierElement.find('.conservato-seconda').val('SI');
-           supplierElement.find('.note-seconda').val('');
+           supplierElement.find('.note-seconda').val('SERB. ESTERNI');
        }
    }
    
